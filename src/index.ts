@@ -1,12 +1,13 @@
-import express from 'express'
-import 'reflect-metadata'
-import DIContainer from './di-container'
-import { HelloRouter } from './hello/HelloRouter';
+import 'reflect-metadata';
+import { InversifyExpressServer } from 'inversify-express-utils';
+import DIContainer from './di-container';
 
-const app = express()
+// Register controllers by importing them.
+import './hello/HelloController';
+
 const port = 3000
 
-const helloRouter = DIContainer.resolve<HelloRouter>(HelloRouter)
-app.get('/', helloRouter.home)
+let server = new InversifyExpressServer(DIContainer);
+let app = server.build()
 
 app.listen(port, () => { console.log(`Listening on port ${port}!`) })

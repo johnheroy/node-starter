@@ -1,11 +1,12 @@
 {
-  "name": "express-rxjs-knex-sample",
+  "name": "node-starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "description": "Starter pack for Node.js backend with Express, RxJS, Typescript, TypeORM, and Inversify",
+  "main": "build/index.js",
   "scripts": {
     "start": "tsc && node build/index.js",
     "dev": "concurrently --kill-others \"tsc -w\" \"nodemon build/index.js\"",
+    "debug": "concurrently --kill-others \"tsc -w\" \"nodemon --inspect=5858 build/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
