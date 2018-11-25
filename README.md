@@ -23,10 +23,21 @@ Right now this is kind of a slimmed down CRUDish app with two endpoints
 
 The idea is that one can copy this repo and then use the hellos resource as an example and starting point for some real CRUD data.
 
-## Known issues
+## Instructions
+
+Set database connection details in `ormconfig.json`.
+
+```bash
+npm install
+npm run dev
+```
+
+## Known issues / future works
 
 I want to use the rich operators library of RxJS and there is much stronger support for Promises and async/await in both TypeORM and Inversify (am currently using the `InversifyExpressServer`), so to put `Observable` in the middle of the data layer giving me `Promise` and also having to return `Promise` is well, a little forced (see [this Inversify issue](https://github.com/inversify/InversifyJS/issues/1003)).
 
 So I might move away from `InversifyExpressServer` and use Express directly or with a standalone Express Typescript decorators framework so I can have more RxJS-based Express controller logic for my endpoints and just transform TypeORM promises to Observables to `from`.
 
 Also--this project doesn't have any user authentication support yet, which I plan to add with Passport.js.
+
+The last major thing is that this repository is far from being "productionized". It assumes we're only ever running in a dev environment, there's no process management to fully take advantage of multiple CPU cores on a VM, and hardcoded local database details. Plus, I'm not completely sure that the way that db migrations is set up won't completely break the app when deployed.
