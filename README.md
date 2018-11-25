@@ -12,6 +12,7 @@ In particular I wanted to explore these tools:
 * RxJS
 * TypeORM
 * Visual Studio Code (for writing code and live debugger)
+* Windows Subsystem for Linux (WSL)
 
 ## Overview
 

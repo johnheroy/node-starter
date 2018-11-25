@@ -9,6 +9,6 @@ export class Hello {
   @Column()
   public name: string
 
-  @CreateDateColumn({ name: 'created_at '})
+  @CreateDateColumn({ name: 'created_at'})
   public createdAt: Date
 }
