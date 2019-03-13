@@ -3,8 +3,8 @@
   "host": "localhost",
   "port": 5432,
   "username": "postgres",
-  "password": "password",
-  "database": "hello-test",
+  "password": "docker",
+  "database": "hello_test",
   "synchronize": false,
   "migrationsRun": true,
   "entities": [
