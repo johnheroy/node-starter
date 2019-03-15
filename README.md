@@ -36,3 +36,7 @@ npm run dev
 - [ ] Better nodemon configuration (only build 1x when first starting)
 - [ ] Logging & metrics
 - [ ] Debugging configuration for VS Code
+
+## License
+
+MIT
